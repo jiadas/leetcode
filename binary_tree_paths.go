@@ -27,13 +27,11 @@ func dfsTree(node *TreeNode, path string, paths []string) []string {
 		return append(paths, path)
 	}
 
-	var l []string
 	if node.Left != nil {
-		paths = append(paths, dfsTree(node.Left, path, l)...)
+		paths = append(paths, dfsTree(node.Left, path, nil)...)
 	}
-	var r []string
 	if node.Right != nil {
-		paths = append(paths, dfsTree(node.Right, path, r)...)
+		paths = append(paths, dfsTree(node.Right, path, nil)...)
 	}
 	return paths
 }
