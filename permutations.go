@@ -13,7 +13,7 @@ func doPermute(nums []int, p []int, result [][]int) [][]int {
 	for i, value := range nums {
 		r := append([]int{}, nums[:i]...)
 		r = append(r, nums[i+1:]...)
-		result = append(result, doPermute(r, append(p, value), nil)...)
+		result = append(result, doPermute(r, append([]int(nil), append(p, value)...), nil)...)
 	}
 
 	return result
