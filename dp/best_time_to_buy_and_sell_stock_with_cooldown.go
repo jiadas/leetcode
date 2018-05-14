@@ -12,7 +12,7 @@ import "fmt"
 //    buy[i] = max{buy[i-1], sell[i-2] - prices[i]}
 //
 // 最终我们要求的结果是 sell[n - 1] ，表示最后一天结束时，手里没有股票时的最大利润。
-func maxProfit(prices []int) int {
+func maxProfitWithCooldown(prices []int) int {
 	n := len(prices)
 	if n == 0 {
 		return 0
