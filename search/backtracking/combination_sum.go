@@ -20,7 +20,8 @@ func doCombinationSum(candidates []int, c []int, sum int, target int, result [][
 	if sum > target {
 		return result
 	}
-	for i := 0; i < len(candidates); i++ {
+	//for i := 0; i < len(candidates); i++ {
+	for i := range candidates {
 		if sum+candidates[i] <= target {
 			r := append([]int(nil), candidates[i:]...)
 			result = append(result, doCombinationSum(r, append(c, candidates[i]), sum+candidates[i], target, nil)...)

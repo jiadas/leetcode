@@ -56,7 +56,5 @@ func main() {
 		{'A', 'D', 'E', 'E'},
 	}, "ABCCED"))
 
-	fmt.Println(exist([][]byte{
-		{'a'},
-	}, "ab"))
+	fmt.Println(exist([][]byte{{'a'}}, "ab"))
 }

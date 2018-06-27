@@ -5,6 +5,8 @@ import (
 	"sort"
 )
 
+// find all unique combinations in candidates where the candidate numbers sums to target
+// Each number in candidates may only be used once in the combination.
 func combinationSum2(candidates []int, target int) [][]int {
 	if len(candidates) == 0 {
 		return nil

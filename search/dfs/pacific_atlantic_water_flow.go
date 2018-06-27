@@ -15,6 +15,7 @@ func pacificAtlantic(matrix [][]int) [][]int {
 	}
 	m1, n1 = len(matrix), len(matrix[0])
 
+	// canReachP[i][j] 表示从点 [i,j] 是否可以流动到 Pacific。 true=可以，false=不可以
 	var canReachP, canReachA [][]bool
 	for i := 0; i < m1; i++ {
 		canReachP = append(canReachP, make([]bool, n1))

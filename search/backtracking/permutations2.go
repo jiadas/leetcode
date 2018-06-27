@@ -21,9 +21,9 @@ func doUniquePermute(nums []int, p []int, result [][]int) [][]int {
 		}
 		r := append([]int{}, nums[:i]...)
 		r = append(r, nums[i+1:]...)
-		// 一定要用p的copy去递归调用
-		// 因为当slice的cap>len时，append操作的是同一个底层数组，元素以最终的结果为准，
-		// 只有当len>cap时才会重新分配数组，这样再做append就不会影响老的数组元素
+		// 一定要用 p 的 copy 去递归调用
+		// 因为当 slice 的 cap > len 时，append 操作的是同一个底层数组，元素以最终的结果为准，
+		// 只有当 len > cap 时才会重新分配数组，这样再做 append 就不会影响老的数组元素
 		// append([]int(nil), append(p, value)...) 等价于
 		// b = make([]int, len(append(p, value)))
 		// copy(b, p)
