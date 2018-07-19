@@ -12,10 +12,10 @@ func longestPalindrome(s string) int {
 		// Input: "ccc"
 		//Output: 1
 		//Expected: 3
-		ret += (c / 2) * 2
+		ret += (c / 2) * 2 // 每个字符有偶数个可以用来构成回文字符串，即某个字符可能有7个，取6个用来构成回文字符串
 	}
 	if ret < len(s) {
-		ret++
+		ret++ // 这个条件下 s 中一定有单个未使用的字符存在，可以把这个字符放到回文的最中间
 	}
 	return ret
 }

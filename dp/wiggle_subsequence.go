@@ -6,7 +6,7 @@ import "fmt"
 //    up position, it means nums[i] > nums[i-1]
 //    down position, it means nums[i] < nums[i-1]
 //    equals to position, nums[i] == nums[i-1]
-// So we can use two arrays up[] and down[] to record the max wiggle sequence length so far at index i.
+// {{So we can use two arrays up[] and down[] to record the max wiggle sequence length so far at index i.}}
 // If nums[i] > nums[i-1], that means it wiggles up. the element before it must be a down position. so up[i] = down[i-1] + 1; down[i] keeps the same with before.
 // If nums[i] < nums[i-1], that means it wiggles down. the element before it must be a up position. so down[i] = up[i-1] + 1; up[i] keeps the same with before.
 // If nums[i] == nums[i-1], that means it will not change anything becasue it didn’t wiggle at all. so both down[i] and up[i] keep the same.

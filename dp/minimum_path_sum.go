@@ -15,9 +15,9 @@ func minPathSum(grid [][]int) int {
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
 			switch {
-			case i == 0 && j > 0:
+			case i == 0 && j > 0: // 只能从左侧走到该位置
 				dp[i][j] = dp[i][j-1] + grid[i][j]
-			case j == 0 && i > 0:
+			case j == 0 && i > 0: // 只能从上侧走到该位置
 				dp[i][j] = dp[i-1][j] + grid[i][j]
 			case i > 0 && j > 0:
 				dp[i][j] = dp[i][j-1] + grid[i][j]

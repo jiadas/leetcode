@@ -1,5 +1,6 @@
 package main
 
+// 题目描述：只保留值在 L ~ R 之间的节点
 func trimBST(root *TreeNode, L int, R int) *TreeNode {
 	if root == nil {
 		return nil

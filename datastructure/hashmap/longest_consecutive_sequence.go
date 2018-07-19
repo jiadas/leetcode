@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// We will use HashMap. The key thing is to keep track of the sequence length and store that in the boundary points of the sequence. For example, as a result, for sequence {1, 2, 3, 4, 5}, map.get(1) and map.get(5) should both return 5.
+// We will use HashMap. {{The key thing is to keep track of the sequence length and store that in the [boundary points] of the sequence}}. For example, as a result, for sequence {1, 2, 3, 4, 5}, map.get(1) and map.get(5) should both return 5.
 //
 // Whenever a new element n is inserted into the map, do two things:
 //

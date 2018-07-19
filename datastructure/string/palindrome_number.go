@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 将整数分成左右两部分，右边那部分需要转置，然后判断这两部分是否相等
 func isPalindrome(x int) bool {
 	if x == 0 {
 		return true

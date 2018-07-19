@@ -3,17 +3,12 @@ package main
 import "fmt"
 
 func climbStairs(n int) int {
-	if n == 0 {
-		return 0
+	if n <= 2 {
+		return n
 	}
-	if n == 1 {
-		return 1
-	}
-	if n == 2 {
-		return 2
-	}
+
 	var result int
-	preStep1, preStep2 := 2, 1
+	preStep1, preStep2 := 2, 1 // preStep1:前1阶楼梯，preStep2:前2阶楼梯
 	for i := 3; i <= n; i++ {
 		result = preStep1 + preStep2
 		preStep2 = preStep1

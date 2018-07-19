@@ -9,6 +9,6 @@ func missingNumber(nums []int) int {
 		ret ^= i ^ nums[i]
 	}
 	// 在遍历 nums 时，为了不越界，i 最大只能到 n-1
-	// 最好还差和 n 进行异或
+	// 最后还差和 n 进行异或
 	return ret ^ len(nums)
 }

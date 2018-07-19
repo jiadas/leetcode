@@ -6,7 +6,7 @@ import (
 )
 
 func numSquares(n int) int {
-	dp := make([]int, n+1)
+	dp := make([]int, n+1) // dp[i] 表示能分割 i 的平方数的最少个数
 	for i := 1; i <= n; i++ {
 		dp[i] = math.MaxInt32
 	}

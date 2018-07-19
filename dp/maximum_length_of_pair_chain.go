@@ -24,7 +24,7 @@ func findLongestChain(pairs [][]int) int {
 	if n == 0 {
 		return 0
 	}
-	dp := make([]int, n)
+	dp := make([]int, n) // dp[i] 表示以第 i 对数字为结尾的 chain 的最大长度
 	for i := 0; i < n; i++ {
 		dp[i] = 1
 	}

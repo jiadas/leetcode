@@ -15,7 +15,6 @@ func reverseVowels(s string) string {
 	sl := make([]byte, len(s))
 	// 一定要加上等号：hello
 	for i <= j {
-		fmt.Println(i, j)
 		ci := s[i]
 		cj := s[j]
 		if !strings.Contains(string(v), string(ci)) {

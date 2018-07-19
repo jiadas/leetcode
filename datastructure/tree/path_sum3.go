@@ -4,7 +4,7 @@ func pathSum(root *TreeNode, sum int) int {
 	if root == nil {
 		return 0
 	}
-	// 以 root 为起点，和为 sum 的路径数 + 左子树里和为 sum 的路径数 + 右子树里和为 sum 的路径数
+	// 以 root 为起点和为 sum 的路径数 + 左子树里和为 sum 的路径数 + 右子树里和为 sum 的路径数
 	return pathSumStartWithRoot(root, sum) + pathSum(root.Left, sum) + pathSum(root.Right, sum)
 }
 

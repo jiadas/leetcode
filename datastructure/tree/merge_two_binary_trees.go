@@ -7,7 +7,8 @@ func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
 
 	// 这样声明的 head 默认值是 nil，后续操作 head 里的成员会 panic
 	// var head *TreeNode
-	head := &TreeNode{}
+	//head := &TreeNode{}
+	head := new(TreeNode)
 	var left1, left2 *TreeNode
 	var right1, right2 *TreeNode
 	switch {

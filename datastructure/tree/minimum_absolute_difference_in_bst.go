@@ -4,7 +4,7 @@ import "math"
 
 var (
 	minDiff int
-	preVal  int // 用全局变量，实现O(1)的空间复杂度。也可以用数组记录遍历结果，在遍历数组，但是空间复杂度为O(n)
+	preVal  int // 用全局变量，实现O(1)的空间复杂度。也可以用数组记录遍历结果，再遍历数组，但是空间复杂度为O(n)
 )
 
 func getMinimumDifference(root *TreeNode) int {
