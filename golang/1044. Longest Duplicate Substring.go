@@ -1,9 +1,8 @@
 package golang
 
 import (
+	"math"
 	"strings"
-
-	"github.com/ethereum/go-ethereum/common/math"
 )
 
 // 官方题解：

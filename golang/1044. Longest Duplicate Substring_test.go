@@ -50,7 +50,7 @@ func Test_longestDupSubstring(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := longestDupSubstring(tt.args.S); got != tt.want {
-				t.Errorf("(len(s)=%d)longestDupSubstring() = (len=%d) %v, \nwant(len=%d) %v", len(tt.args.S), len(got), got, len(tt.want), tt.want)
+				t.Errorf("len(S) = %d\nlen(got) = %d\nlongestDupSubstring() = %v, \nlen(want) = %d\n want %v", len(tt.args.S), len(got), got, len(tt.want), tt.want)
 			}
 		})
 	}
