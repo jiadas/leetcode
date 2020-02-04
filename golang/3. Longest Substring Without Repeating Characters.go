@@ -42,10 +42,3 @@ func lengthOfLongestSubstringFD(s string) int {
 	}
 	return max
 }
-
-func maxInt(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}

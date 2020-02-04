@@ -2,12 +2,6 @@ package golang
 
 import "fmt"
 
-// Definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func NewList(vals ...int) *ListNode {
 	var head, tail *ListNode
 	for i, val := range vals {
