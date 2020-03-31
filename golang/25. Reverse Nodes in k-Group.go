@@ -1,7 +1,7 @@
 package golang
 
 // 递归：https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/11423/Short-but-recursive-Java-code-with-comments
-// 递归虽然简介，但是不符合题目里要求的常数空间复杂度
+// 递归虽然简洁，但是不符合题目里要求的常数空间复杂度
 // 所以还是得遍历：https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/11440/Non-recursive-Java-solution-and-idea
 func reverseKGroup(head *ListNode, k int) *ListNode {
 	if head == nil || k == 1 {
