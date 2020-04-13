@@ -14,7 +14,7 @@ func minInt(a, b int) int {
 	return b
 }
 
-func abs(x int) int {
+func absInt(x int) int {
 	if x < 0 {
 		return -x
 	}

@@ -7,7 +7,7 @@ func divide(dividend int, divisor int) int {
 	if dividend == math.MinInt32 && divisor == -1 {
 		return math.MaxInt32
 	}
-	dvd, dvs := abs(dividend), abs(divisor)
+	dvd, dvs := absInt(dividend), absInt(divisor)
 	var result int
 	for dvd >= dvs {
 		tmp, m := dvs, 1
