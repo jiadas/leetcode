@@ -5,6 +5,7 @@ func searchRange(nums []int, target int) []int {
 	return binarySearchPart(nums, 0, len(nums)-1, target)
 }
 
+// 自己想的递归的方式
 func binarySearchPart(nums []int, l, r, target int) []int {
 	result := []int{-1, -1}
 	for l <= r {
@@ -37,5 +38,43 @@ func binarySearchPart(nums []int, l, r, target int) []int {
 			l = mid + 1
 		}
 	}
+	return result
+}
+
+// 根据二分查找模板来实现
+// https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/er-fen-cha-zhao-xiang-jie
+func searchRange34(nums []int, target int) []int {
+	result := []int{-1, -1}
+	left, right := 0, len(nums)-1
+	var mid int
+	// 找左边界
+	for left <= right {
+		mid = left + (right-left)>>1
+		if nums[mid] < target {
+			left = mid + 1
+		} else if nums[mid] > target {
+			right = mid - 1
+		} else if nums[mid] == target {
+			right = mid - 1
+		}
+	}
+	if left >= len(nums) || nums[left] != target {
+		return result
+	} else {
+		result[0] = left
+	}
+
+	right = len(nums) - 1
+	for left <= right {
+		mid = left + (right-left)>>1
+		if nums[mid] < target {
+			left = mid + 1
+		} else if nums[mid] > target {
+			right = mid - 1
+		} else if nums[mid] == target {
+			left = mid + 1
+		}
+	}
+	result[1] = right
 	return result
 }
