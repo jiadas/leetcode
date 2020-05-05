@@ -2,8 +2,10 @@ package golang
 
 import "math"
 
+// 讨论区里关于中序遍历的通解（迭代 + 栈）：
+// https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution)
+// 官方题解方法一加入了上下边界的判断来解决：
 // https://leetcode-cn.com/problems/validate-binary-search-tree/solution/yan-zheng-er-cha-sou-suo-shu-by-leetcode-solution/
-// 官方题解方法一加入了上下边界的判断来解决
 // 想到了用中序遍历来校验是否为二叉搜索树，但是代码写不出来，卧槽
 func isValidBST(root *TreeNode) bool {
 	return judgeWithRange(root, math.MinInt64, math.MaxInt64)
