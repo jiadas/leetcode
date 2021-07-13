@@ -1,6 +1,6 @@
 package golang
 
-// Definition for singly-linked list.
+// ListNode is a singly-linked list node.
 type ListNode struct {
 	Val  int
 	Next *ListNode
