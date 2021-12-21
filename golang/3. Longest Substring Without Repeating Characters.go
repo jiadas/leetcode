@@ -35,6 +35,11 @@ func lengthOfLongestSubstringFD(s string) int {
 	var max int
 	for i, j := 0, 0; i < len(s); i++ {
 		if index, ok := m[s[i]]; ok {
+			// Because (j) here represents the start index of our string.
+			// (i) is the pointer that traverses the whole string.
+			// Say we find s.charAt(i) is already in the map,
+			// 	case 1: its index < j, then our start index should still be j because it is no longer included in the calculation of the length of the string;
+			// 	case 2: index >= j, then our start index should be (index + 1).
 			j = maxInt(j, index+1)
 		}
 		m[s[i]] = i
