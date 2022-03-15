@@ -23,8 +23,8 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 }
 
 func reverseList(begin, end *ListNode) *ListNode {
-	first, curr := begin.Next, begin.Next
-	pre := begin
+	first := begin.Next
+	pre, curr := begin, begin.Next
 	var next *ListNode
 	for curr != end {
 		next = curr.Next
