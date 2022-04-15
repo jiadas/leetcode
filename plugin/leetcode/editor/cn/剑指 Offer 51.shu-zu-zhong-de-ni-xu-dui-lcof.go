@@ -22,7 +22,7 @@ func reversePairsCore(nums []int) ([]int, int) {
 		count       int
 	)
 
-	// bug1: l 和 r 从 len 开始，而不是 len-1
+	// bug1: l 和 r 错误的从 len 开始了，而不是 len-1
 	l, r := len(sortedLeft)-1, len(sortedRight)-1
 	for l >= 0 && r >= 0 {
 		if sortedLeft[l] > sortedRight[r] {
