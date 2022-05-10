@@ -1,7 +1,7 @@
 package golang
 
 // leetcode submit region begin(Prohibit modification and deletion)
-func reversePairs(nums []int) int {
+func reversePairsOffer51(nums []int) int {
 	_, ans := reversePairsCore(nums)
 	return ans
 }
