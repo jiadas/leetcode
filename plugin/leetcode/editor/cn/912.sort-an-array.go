@@ -1,7 +1,16 @@
 package golang
 
+import (
+	"math/rand"
+	"time"
+)
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func sortArray(nums []int) []int {
+	return doRandomizedQuickSort(nums)
+}
+
+func mergeSort(nums []int) []int {
 	n := len(nums)
 	if n <= 1 {
 		return nums
@@ -22,6 +31,31 @@ func sortArray(nums []int) []int {
 	}
 
 	return nums
+}
+
+func doRandomizedQuickSort(nums []int) []int {
+	rand.Seed(time.Now().UnixNano())
+	randomizedQuickSort(nums, 0, len(nums)-1)
+	return nums
+}
+
+func randomizedQuickSort(nums []int, l, r int) {
+	if l < r {
+		p := rand.Intn(r-l+1) + l
+		nums[p], nums[r] = nums[r], nums[p]
+		pivot := nums[r]
+		i := l - 1
+		for j := l; j <= r-1; j++ {
+			if nums[j] < pivot {
+				i++
+				nums[i], nums[j] = nums[j], nums[i]
+			}
+		}
+		i++
+		nums[i], nums[r] = nums[r], nums[i]
+		randomizedQuickSort(nums, l, i-1)
+		randomizedQuickSort(nums, i+1, r)
+	}
 }
 
 // leetcode submit region end(Prohibit modification and deletion)
