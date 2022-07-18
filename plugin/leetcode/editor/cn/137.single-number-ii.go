@@ -1,7 +1,7 @@
 package golang
 
 // leetcode submit region begin(Prohibit modification and deletion)
-func singleNumber(nums []int) int {
+func singleNumber137(nums []int) int {
 	// 注意将所有中间变量声明成 int32
 	var ans int32
 	for i := 0; i < 32; i++ {
