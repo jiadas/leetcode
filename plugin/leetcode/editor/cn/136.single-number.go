@@ -1,7 +1,7 @@
 package golang
 
 // leetcode submit region begin(Prohibit modification and deletion)
-func singleNumber(nums []int) int {
+func singleNumber136(nums []int) int {
 	var ans int
 	for _, num := range nums {
 		ans ^= num
