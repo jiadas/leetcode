@@ -2,11 +2,12 @@ package golang
 
 // leetcode submit region begin(Prohibit modification and deletion)
 func lengthOfLIS(nums []int) int {
-	// 状态：f[i] 表示 nums[0..i] 中以 nums[i] 结尾的最长严格递增子序列的长度
 	n := len(nums)
 	if n == 0 || n == 1 {
 		return n
 	}
+
+	// 状态：f[i] 表示 nums[0..i] 中以 nums[i] 结尾的最长严格递增子序列的长度
 	f := make([]int, n)
 	f[0] = 1
 	max := f[0]
